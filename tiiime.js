@@ -6,14 +6,22 @@ var events = [
 {
 	"image":"http://placehold.it/300x200",
 	"title":"Grader Abe"
+},
+{
+	"image":"http://placehold.it/500x400",
+	"title":"Gradest Abe"
 }];
 
 var scrollBarContainer = $('#scroll-bar-container');
 scrollBarContainer.slider();
 var contentContainer = $('#content-container');
-var image = $('<img src="' + events[1].image + '">');
-var title = $('<p>' + events[1].title + '</p>');
-contentContainer.append(image);
-contentContainer.append(title);
+
+
+for (var i = 0; i < events.length; i++) {
+	var image = $('<img src="' + events[i].image + '">');
+	var title = $('<p>' + events[i].title + '</p>');
+	contentContainer.append(image);
+    contentContainer.append(title);
+};
 
 
