@@ -19,7 +19,10 @@ function onSlide(event,ui) {
 }
 
 function displayEvent (eventNumber) {
-	console.log(events[eventNumber].title);
+	for (var i = 0; i < eventContainers.length; i++) {
+		eventContainers[i].removeClass('displayed');
+	}
+	eventContainers[eventNumber].addClass('displayed');
 }
 
 
@@ -28,16 +31,19 @@ var scrollBarContainer = $('#scroll-bar-container');
 scrollBarContainer.slider();
 scrollBarContainer.on('slide',onSlide);
 var contentContainer = $('#content-container');
+var eventContainers = [];
 
 
 for (var i = 0; i < events.length; i++) {
 
-	var eventContentContainer = $('<div></div>');
+	eventContainers.push($('<div class="event-content-container"></div>'));
 	var image = $('<img src="' + events[i].image + '">');
 	var title = $('<p>' + events[i].title + '</p>');
-	eventContentContainer.append(image);
-    eventContentContainer.append(title);
-    contentContainer.append(eventContentContainer);
+
+	eventContainers[i].append(image);
+    eventContainers[i].append(title);
+    contentContainer.append(eventContainers[i]);
+
 
 };
 
