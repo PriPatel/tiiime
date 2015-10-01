@@ -12,16 +12,26 @@ var events = [
 	"title":"Gradest Abe"
 }];
 
+function onSlide(event,ui) {
+	console.log(ui.value);
+	
+}
+
 var scrollBarContainer = $('#scroll-bar-container');
 scrollBarContainer.slider();
+scrollBarContainer.on('slide',onSlide);
 var contentContainer = $('#content-container');
 
 
 for (var i = 0; i < events.length; i++) {
+
+	var eventContentContainer = $('<div></div>');
 	var image = $('<img src="' + events[i].image + '">');
 	var title = $('<p>' + events[i].title + '</p>');
-	contentContainer.append(image);
-    contentContainer.append(title);
+	eventContentContainer.append(image);
+    eventContentContainer.append(title);
+    contentContainer.append(eventContentContainer);
+
 };
 
 
