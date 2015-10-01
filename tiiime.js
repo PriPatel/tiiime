@@ -13,8 +13,8 @@ var events = [
 }];
 
 function onSlide(event,ui) {
-	var scalar = ui.value / 100;
-	var eventNumber = Math.round(scalar * (events.length-1));
+	var scalar = ui.value / 100.01;
+	var eventNumber = Math.floor(scalar * (events.length));
 	displayEvent(eventNumber);
 }
 
