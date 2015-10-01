@@ -13,9 +13,16 @@ var events = [
 }];
 
 function onSlide(event,ui) {
-	console.log(ui.value);
-	
+	var scalar = ui.value / 100;
+	var eventNumber = Math.round(scalar * (events.length-1));
+	displayEvent(eventNumber);
 }
+
+function displayEvent (eventNumber) {
+	console.log(events[eventNumber].title);
+}
+
+
 
 var scrollBarContainer = $('#scroll-bar-container');
 scrollBarContainer.slider();
