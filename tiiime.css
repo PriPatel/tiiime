@@ -5,6 +5,11 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 	margin: auto;
 }
 
+body{
+	background-color: #f8f8f8;
+}
+
+
 .event-content-container.displayed{
 	display: block;
 	padding: 100px;
@@ -13,18 +18,23 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 #title{
 	font-size: x-large;
 	font-family: ubuntu;
+	padding:10px;
+	text-align: center;
 }
 
 
 #date{
-	font-size:100px;
+	font-size:80px;
 	font-family:ubuntu;
+	text-align: center;
 }
 
 
 .event-content-container img{
 	width:200px;
-	display: inline-block;
+	display: block;
+    margin-left: auto;
+    margin-right: auto
 }
 
 p{
@@ -38,6 +48,11 @@ p{
 	color:white;
 	display:inline-block; 
 	background-color: #212121;
+}
+
+.scroll-bar-container{
+	position: fixed;
+	bottom:0px;
 }
 
 
