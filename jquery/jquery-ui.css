@@ -94,7 +94,7 @@
 	position: absolute;
 	z-index: 2;
 	width: 1.7em;
-	height: 1.2em;
+	height: 1.5em;
 	cursor: default;
 	-ms-touch-action: none;
 	touch-action: none;
@@ -115,7 +115,7 @@
 }
 
 .ui-slider-horizontal {
-	height: .8em;
+	height: 1em;
 }
 .ui-slider-horizontal .ui-slider-handle {
 	top: -.3em;
@@ -169,7 +169,7 @@
 	font-size: 1em;
 }
 .ui-widget-content {
-	border: 1px solid #aaaaaa;
+	border: 1px solid #222121;
 	background: #222121 url("images/ui-bg_flat_60_222121_40x100.png") 50% 50% repeat-x;
 	color: #222121;
 }
@@ -177,7 +177,7 @@
 	color: #222121;
 }
 .ui-widget-header {
-	border: 1px solid #aaaaaa;
+	border: 1px solid #222121;
 	background: #222121 url("images/ui-bg_highlight-soft_75_222121_1x100.png") 50% 50% repeat-x;
 	color: #222222;
 	font-weight: bold;
@@ -191,8 +191,8 @@
 .ui-state-default,
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
-	border: 3px solid #ffffff;
-	background: #0bbbef url("images/ui-bg_flat_75_0bbbef_40x100.png") 50% 50% repeat-x;
+	border: 3px solid #222121;
+	background: #f8f8f8 url("images/ui-bg_flat_75_f8f8f8_40x100.png") 50% 50% repeat-x;
 	font-weight: normal;
 	color: #555555;
 }
@@ -208,8 +208,8 @@
 .ui-state-focus,
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
-	border: 3px solid #ffffff;
-	background: #f8f8f8 url("images/ui-bg_flat_75_f8f8f8_40x100.png") 50% 50% repeat-x;
+	border: 3px solid #222121;
+	background: #0bbbef url("images/ui-bg_flat_75_0bbbef_40x100.png") 50% 50% repeat-x;
 	font-weight: normal;
 	color: #212121;
 }
@@ -227,7 +227,7 @@
 .ui-state-active,
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active {
-	border: 3px solid #ffffff;
+	border: 3px solid #222121;
 	background: #0bbbef url("images/ui-bg_flat_65_0bbbef_40x100.png") 50% 50% repeat-x;
 	font-weight: normal;
 	color: #212121;
@@ -244,7 +244,7 @@
 .ui-state-highlight,
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {
-	border: 1px solid #fcefa1;
+	border: 2px solid #fcefa1;
 	background: #fbf2ee url("images/ui-bg_glass_55_fbf2ee_1x400.png") 50% 50% repeat-x;
 	color: #363636;
 }
@@ -513,25 +513,25 @@
 .ui-corner-top,
 .ui-corner-left,
 .ui-corner-tl {
-	border-top-left-radius: 10px;
+	border-top-left-radius: 20px;
 }
 .ui-corner-all,
 .ui-corner-top,
 .ui-corner-right,
 .ui-corner-tr {
-	border-top-right-radius: 10px;
+	border-top-right-radius: 20px;
 }
 .ui-corner-all,
 .ui-corner-bottom,
 .ui-corner-left,
 .ui-corner-bl {
-	border-bottom-left-radius: 10px;
+	border-bottom-left-radius: 20px;
 }
 .ui-corner-all,
 .ui-corner-bottom,
 .ui-corner-right,
 .ui-corner-br {
-	border-bottom-right-radius: 10px;
+	border-bottom-right-radius: 20px;
 }
 
 /* Overlays */
