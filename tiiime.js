@@ -1,3 +1,4 @@
+var eventContainers = [];
 
 function onSlide(event,ui) {
 	var scalar = ui.value / 100.01;
@@ -13,29 +14,24 @@ function displayEvent (eventNumber) {
 }
 
 
+function init (){
+	var scrollBarContainer = $('#scroll-bar-container');
+	scrollBarContainer.slider();
+	scrollBarContainer.on('slide',onSlide);
+	var contentContainer = $('#content-container');
 
-var scrollBarContainer = $('#scroll-bar-container');
-scrollBarContainer.slider();
-scrollBarContainer.on('slide',onSlide);
-var contentContainer = $('#content-container');
-var eventContainers = [];
+	for (var i = 0; i < events.length; i++) {
+		eventContainers.push($('<div class="event-content-container"></div>'));
+		var image = $('<img src="' + events[i].image + '">');
+		var title = $('<div class="title">' + events[i].title + '</div>');
+		var date = $('<div class="date">' + events[i].date + '</div>');
+		image.addClass('placeImages');
 
+		eventContainers[i].append(image);
+    	eventContainers[i].append(title);
+    	eventContainers[i].append(date);
+    	contentContainer.append(eventContainers[i]);
+	}
+}
 
-for (var i = 0; i < events.length; i++) {
-
-	eventContainers.push($('<div class="event-content-container"></div>'));
-	var image = $('<img src="' + events[i].image + '">');
-	var title = $('<div class="title">' + events[i].title + '</div>');
-	var date = $('<div class="date">' + events[i].date + '</div>');
-	image.addClass('placeImages');
-
-	eventContainers[i].append(image);
-    eventContainers[i].append(title);
-    eventContainers[i].append(date);
-    contentContainer.append(eventContainers[i]);
-
-
-};
-
-
-
+init();
