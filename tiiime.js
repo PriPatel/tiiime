@@ -6,7 +6,7 @@ function onSlide(event,ui) {
 	displayEvent(eventNumber);
 }
 
-function displayEvent (eventNumber) {
+function displayEvent(eventNumber) {
 	for (var i = 0; i < eventContainers.length; i++) {
 		eventContainers[i].removeClass('displayed');
 	}
@@ -14,7 +14,7 @@ function displayEvent (eventNumber) {
 }
 
 
-function init (){
+function init() {
 	var scrollBarContainer = $('#scroll-bar-container');
 	scrollBarContainer.slider();
 	scrollBarContainer.on('slide',onSlide);
@@ -32,6 +32,32 @@ function init (){
     	eventContainers[i].append(date);
     	contentContainer.append(eventContainers[i]);
 	}
+	setupNavigation();
 }
 
 init();
+
+
+function setupNavigation () {
+	var navigationContainer = $('#navigation-container');
+	var groups = [{
+		"name":"a"
+	},
+	{
+		"name":"b"
+	},
+	{
+		"name":"c"
+	},
+	{
+		"name":"d"
+	},
+	];
+
+	for (var i = 0; i < groups.length; i++) {
+		var button = $('<div class="button">' + groups[i].name + '</div>');
+		navigationContainer.append(button);
+	};
+
+}
+
