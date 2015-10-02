@@ -54,5 +54,11 @@ p{
     margin-right: auto;
 }
 
+.button{
+	width:50px;
+	background-color:#212121;
+	height:50px;
+	font-size: 30px;
+}
 
 

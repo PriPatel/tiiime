@@ -55,7 +55,7 @@ function setupNavigation () {
 	];
 
 	for (var i = 0; i < groups.length; i++) {
-		var button = $('<div class="button">' + groups[i].name + '</div>');
+		var button = $('<span class="button">' + groups[i].name + '</span>');
 		navigationContainer.append(button);
 	};
 
