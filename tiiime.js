@@ -109,6 +109,7 @@ for (var i = 0; i < events.length; i++) {
 	var image = $('<img src="' + events[i].image + '">');
 	var title = $('<div id="title">' + events[i].title + '</div>');
 	var date = $('<div id="date">' + events[i].date + '</div>');
+	image.addClass('placeImages');
 
 	eventContainers[i].append(image);
     eventContainers[i].append(title);
