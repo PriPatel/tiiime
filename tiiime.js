@@ -2,7 +2,7 @@ var eventContainers = [];
 
 function onSlide(event,ui) {
 	var scalar = ui.value / 100.01;
-	var eventNumber = Math.floor(scalar * (events.length));
+	var eventNumber = Math.floor(scalar * (placesEvents.length));
 	displayEvent(eventNumber);
 }
 
@@ -20,11 +20,11 @@ function init() {
 	scrollBarContainer.on('slide',onSlide);
 	var contentContainer = $('#content-container');
 
-	for (var i = 0; i < events.length; i++) {
+	for (var i = 0; i < placesEvents.length; i++) {
 		eventContainers.push($('<div class="event-content-container"></div>'));
-		var image = $('<img src="' + events[i].image + '">');
-		var title = $('<div class="title">' + events[i].title + '</div>');
-		var date = $('<div class="date">' + events[i].date + '</div>');
+		var image = $('<img src="' + placesEvents[i].image + '">');
+		var title = $('<div class="title">' + placesEvents[i].title + '</div>');
+		var date = $('<div class="date">' + placesEvents[i].date + '</div>');
 		image.addClass('placeImages');
 
 		eventContainers[i].append(image);

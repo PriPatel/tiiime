@@ -1,4 +1,4 @@
-var events = [
+var placesEvents = [
 {
 	"image":"piccys/UK.png",
 	"title":"London HQ established",
