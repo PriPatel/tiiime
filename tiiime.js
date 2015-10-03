@@ -1,3 +1,4 @@
+
 var eventContainers = [];
 
 function onSlide(event,ui) {
@@ -38,16 +39,21 @@ function init() {
 init();
 
 
+
 function setupNavigation () {
 	var navigationContainer = $('#navigation-container');
 	var groups = [{
-		"name":"Places"
+		"name":"Places",
+		"eventType":placesEvents
 	},
 	{
-		"name":"People"
+		"name":"People",
+		"eventType":peopleEvents
+
 	},
 	{
-		"name":"Products"
+		"name":"Products",
+		"eventType":productEvents
 	},
 	{
 		"name":"Awards"
@@ -57,7 +63,24 @@ function setupNavigation () {
 	for (var i = 0; i < groups.length; i++) {
 		var button = $('<span class="button">' + groups[i].name + '</span>');
 		navigationContainer.append(button);
+
+		function doSomething() {
+			alert("bastard");
+		}
+
+		button.click(doSomething);
+
 	};
 
 }
+
+
+
+
+
+
+
+
+
+
 
