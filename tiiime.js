@@ -41,16 +41,16 @@ init();
 function setupNavigation () {
 	var navigationContainer = $('#navigation-container');
 	var groups = [{
-		"name":"a"
+		"name":"Places"
 	},
 	{
-		"name":"b"
+		"name":"People"
 	},
 	{
-		"name":"c"
+		"name":"Products"
 	},
 	{
-		"name":"d"
+		"name":"Awards"
 	},
 	];
 
