@@ -83,37 +83,37 @@ var placesEvents = [
 
 var peopleEvents = [
 {
-	"image":"piccys/southkorea.png",
+	"image":"piccys/1.png",
 	"title":"3 founders + 1 hire",
 	"date":"2006"
 },
 {
-	"image":"piccys/dubai.png",
+	"image":"piccys/2.png",
 	"title":"10",
 	"date":"2008"
 },
 {
-	"image":"piccys/aus.png",
+	"image":"piccys/3.png",
 	"title":"25",
 	"date":"2010"
 },
 {
-	"image":"piccys/dubai.png",
+	"image":"piccys/4.png",
 	"title":"50",
 	"date":"2011"
 },
 {
-	"image":"piccys/aus.png",
+	"image":"piccys/5.png",
 	"title":"100",
 	"date":"2012"
 },
 {
-	"image":"piccys/dubai.png",
+	"image":"piccys/6.png",
 	"title":"150",
 	"date":"2014"
 },
 {
-	"image":"piccys/aus.png",
+	"image":"piccys/7.png",
 	"title":"200",
 	"date":"2015"
 },
