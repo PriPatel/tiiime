@@ -57,6 +57,11 @@ button2.click(function(){
 	init(peopleEvents);
 });
 
+button3.click(function(){
+	selectedEvents=productEvents
+	init(productEvents);
+});
+
 
 
 
