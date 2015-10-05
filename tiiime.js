@@ -20,7 +20,15 @@ function init(eventType) {
 	var scrollBarContainer = $('#scroll-bar-container');
 	scrollBarContainer.slider();
 	scrollBarContainer.on('slide',onSlide);
+
+	setupEventContainers(eventType);
+	setupNavigation();
+}
+
+
+function setupEventContainers(eventType){
 	var contentContainer = $('#content-container');
+
 
 	for (var i = 0; i < eventType.length; i++) {
 		eventContainers.push($('<div class="event-content-container"></div>'));
@@ -33,11 +41,24 @@ function init(eventType) {
     	eventContainers[i].append(title);
     	eventContainers[i].append(date);
     	contentContainer.append(eventContainers[i]);
+
+
 	}
-	setupNavigation();
+	displayEvent(0);
+
 }
 
+function removeEventContainers(){
+	var contentContainer = $('#content-container');
+	eventContainers=[];
+	contentContainer.empty();
+
+}
+
+
+
 init(selectedEvents);
+
 
 
 // var button1= $('#button1');
@@ -64,7 +85,9 @@ init(selectedEvents);
 
 
 function onClick (event){
-	console.log($(event.currentTarget).data('group'));
+	selectedEvents = $(event.currentTarget).data('group').eventType;
+	removeEventContainers();
+	setupEventContainers(selectedEvents);
 }
 
 
