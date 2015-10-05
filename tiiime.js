@@ -20,7 +20,6 @@ function displayEvent(eventNumber) {
 	eventContainers[eventNumber].addClass('displayed');
 }
 
-
 function init(eventType) {
 	scrollBarContainer.slider();
 	scrollBarContainer.on('slide',onSlide);
@@ -29,10 +28,8 @@ function init(eventType) {
 	setupNavigation();
 }
 
-
 function setupEventContainers(eventType){
 	var contentContainer = $('#content-container');
-
 
 	for (var i = 0; i < eventType.length; i++) {
 		eventContainers.push($('<div class="event-content-container"></div>'));
@@ -49,44 +46,13 @@ function setupEventContainers(eventType){
 
 	}
 	displayEvent(0);
-
 }
 
 function removeEventContainers(){
 	var contentContainer = $('#content-container');
 	eventContainers=[];
 	contentContainer.empty();
-
 }
-
-
-
-init(selectedEvents);
-
-
-
-// var button1= $('#button1');
-// var button2= $('#button2');
-// var button3= $('#button3');
-// var button4= $('#button4');
-
-
-// function onClick (event){
-// 	init(selectedEvents);
-// }
-
-
-// button1.on('click',onClick);
-
-
-
-
-
-
-
-
-
-
 
 function onClick (event){
 	selectedEvents = $(event.currentTarget).data('group').eventType;
@@ -94,8 +60,6 @@ function onClick (event){
 	resetSlider();
 	setupEventContainers(selectedEvents);
 }
-
-
 
 function setupNavigation () {
 	var navigationContainer = $('#navigation-container');
@@ -127,14 +91,5 @@ function setupNavigation () {
 	};
 }
 
-
-	
-
-
-
-
-
-
-
-
+init(selectedEvents);
 
