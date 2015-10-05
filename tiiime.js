@@ -17,7 +17,6 @@ function displayEvent(eventNumber) {
 
 
 function init(eventType) {
-	console.log(eventType);
 	var scrollBarContainer = $('#scroll-bar-container');
 	scrollBarContainer.slider();
 	scrollBarContainer.on('slide',onSlide);
@@ -35,77 +34,73 @@ function init(eventType) {
     	eventContainers[i].append(date);
     	contentContainer.append(eventContainers[i]);
 	}
-	//setupNavigation();
+	setupNavigation();
+}
+
+init(selectedEvents);
+
+
+// var button1= $('#button1');
+// var button2= $('#button2');
+// var button3= $('#button3');
+// var button4= $('#button4');
+
+
+// function onClick (event){
+// 	init(selectedEvents);
+// }
+
+
+// button1.on('click',onClick);
+
+
+
+
+
+
+
+
+
+
+
+function onClick (event){
+	console.log($(event.currentTarget).data('group'));
 }
 
 
-var button1= $('#button1');
-var button2= $('#button2');
-var button3= $('#button3');
-var button4= $('#button4');
+
+function setupNavigation () {
+	var navigationContainer = $('#navigation-container');
+
+	var groups = [{
+		"name":"Places",
+		"eventType":placesEvents
+	},
+	{
+		"name":"People",
+		"eventType":peopleEvents
+	},
+	{
+		"name":"Products",
+		"eventType":productEvents
+	},
+	{
+		"name":"Awards",
+		"eventType":placesEvents
+	},
+	];
 
 
-
-button1.click(function(){
-	selectedEvents=placesEvents
-	init(placesEvents);
-});
-
-
-button2.click(function(){
-	selectedEvents=peopleEvents
-	init(peopleEvents);
-});
-
-button3.click(function(){
-	selectedEvents=productEvents
-	init(productEvents);
-});
+	for (var i = 0; i < groups.length; i++) {
+		var button = $('<span class="button">' + groups[i].name + '</span>');
+		button.data('group', groups[i]);
+		navigationContainer.append(button);
+		button.on('click', onClick);
+	};
+}
 
 
-
-
-
-
-
-
-
-
-
-
-//function setupNavigation () {
-//	var navigationContainer = $('#navigation-container');
-//}
-	//var groups = [{
-	//	"name":"Places",
-	//	"eventType":placesEvents
-	//},
-	//{
-	//	"name":"People",
-	//	"eventType":peopleEvents
-
-	//},
-	//{
-	//	"name":"Products",
-	//	"eventType":productEvents
-	//},
-	//{
-	//	"name":"Awards",
-	//	"eventType":placesEvents
-	//},
-	//];
-	//}
-
-	//for (var i = 0; i < groups.length; i++) {
-		//var button = $('<span class="button">' + groups[i].name + '</span>');
-	   // button.value=[i];
-		//navigationContainer.append(button);
-		//button.click(function doSomething(){
-		//	console.log(button.value);
-		//});
-
-
-	//};
+	
 
 
 

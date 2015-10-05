@@ -54,7 +54,7 @@ p{
     margin-right: auto;
 }
 
-#button1{
+.button{
 	width:150px;
 	background-color:#13B5E3;
 	height:30px;
@@ -70,51 +70,4 @@ p{
 
 }
 
-#button2{
-	width:150px;
-	background-color:#13B5E3;
-	height:30px;
-	font-size: 20px;
-	color:white;
-	padding-top:10px;
-	margin-left:17px;
-	position: relative ;
-	margin-top: 20px;
-	display:inline-block;
-	text-align: center;
-	border-radius:7px;
-
-}
-
-#button3{
-	width:150px;
-	background-color:#13B5E3;
-	height:30px;
-	font-size: 20px;
-	color:white;
-	padding-top:10px;
-	margin-left:17px;
-	position: relative ;
-	margin-top: 20px;
-	display:inline-block;
-	text-align: center;
-	border-radius:7px;
-
-}
-
-#button4{
-	width:150px;
-	background-color:#13B5E3;
-	height:30px;
-	font-size: 20px;
-	color:white;
-	padding-top:10px;
-	margin-left:17px;
-	position: relative ;
-	margin-top: 20px;
-	display:inline-block;
-	text-align: center;
-	border-radius:7px;
-
-}
 
