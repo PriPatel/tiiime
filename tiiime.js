@@ -1,11 +1,16 @@
 
 var selectedEvents = placesEvents;
 var eventContainers = [];
+var scrollBarContainer = $('#scroll-bar-container');
 
 function onSlide(event,ui) {
 	var scalar = ui.value / 100.01;
 	var eventNumber = Math.floor(scalar * (selectedEvents.length));
 	displayEvent(eventNumber);
+}
+
+function resetSlider() {
+	scrollBarContainer.slider('value', 0);
 }
 
 function displayEvent(eventNumber) {
@@ -17,7 +22,6 @@ function displayEvent(eventNumber) {
 
 
 function init(eventType) {
-	var scrollBarContainer = $('#scroll-bar-container');
 	scrollBarContainer.slider();
 	scrollBarContainer.on('slide',onSlide);
 
@@ -87,6 +91,7 @@ init(selectedEvents);
 function onClick (event){
 	selectedEvents = $(event.currentTarget).data('group').eventType;
 	removeEventContainers();
+	resetSlider();
 	setupEventContainers(selectedEvents);
 }
 
