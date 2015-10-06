@@ -1,28 +1,9 @@
 
 var selectedEvents = placesEvents;
 var eventContainers = [];
+var buttons = [];
+
 var scrollBarContainer = $('#scroll-bar-container');
-var i=0
-var groups = [{
-		"name":"Places",
-		"eventType":placesEvents
-	},
-	{
-		"name":"People",
-		"eventType":peopleEvents
-	},
-	{
-		"name":"Products",
-		"eventType":productEvents
-	},
-	{
-		"name":"Awards",
-		"eventType":placesEvents
-	},
-	];
-
-
-var button = $('<span class="button">' + groups[i].name + '</span>');
 
 
 function onSlide(event,ui) {
@@ -54,7 +35,8 @@ function setupEventContainers(eventType){
 	var contentContainer = $('#content-container');
 
 	for (var i = 0; i < eventType.length; i++) {
-		eventContainers.push($('<div class="event-content-container"></div>'));
+		var eventContentContainer = $('<div class="event-content-container"></div>');
+		eventContainers.push(eventContentContainer);
 		var image = $('<img src="' + eventType[i].image + '">');
 		var title = $('<div class="title">' + eventType[i].title + '</div>');
 		var date = $('<div class="date">' + eventType[i].date + '</div>');
@@ -64,8 +46,6 @@ function setupEventContainers(eventType){
     	eventContainers[i].append(title);
     	eventContainers[i].append(date);
     	contentContainer.append(eventContainers[i]);
-
-
 	}
 	displayEvent(0);
 }
@@ -77,6 +57,9 @@ function removeEventContainers(){
 }
 
 function onClick (event){
+	for (var i = 0; i < buttons.length; i++) {
+		buttons[i].removeClass('buttonselected');
+	};
 	selectedEvents = $(event.currentTarget).data('group').eventType;
 	removeEventContainers();
 	resetSlider();
@@ -87,13 +70,31 @@ function onClick (event){
 function setupNavigation () {
 	var navigationContainer = $('#navigation-container');
 
-	
+	var groups = [{
+		"name":"Places",
+		"eventType":placesEvents
+	},
+	{
+		"name":"People",
+		"eventType":peopleEvents
+	},
+	{
+		"name":"Products",
+		"eventType":productEvents
+	},
+	{
+		"name":"Awards",
+		"eventType":placesEvents
+	},
+	];
 
 	for (var i = 0; i < groups.length; i++) {
-		var button = $('<span class="button">' + groups[i].name + '</span>');
-		button.data('group', groups[i]);
-		navigationContainer.append(button);
-		button.on('click', onClick);
+
+
+		buttons.push($('<span class="button">' + groups[i].name + '</span>'));
+		buttons[i].data('group', groups[i]);
+		navigationContainer.append(buttons[i]);
+		buttons[i].on('click', onClick);
 	};
 }
 
