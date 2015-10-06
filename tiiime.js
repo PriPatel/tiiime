@@ -2,6 +2,28 @@
 var selectedEvents = placesEvents;
 var eventContainers = [];
 var scrollBarContainer = $('#scroll-bar-container');
+var i=0
+var groups = [{
+		"name":"Places",
+		"eventType":placesEvents
+	},
+	{
+		"name":"People",
+		"eventType":peopleEvents
+	},
+	{
+		"name":"Products",
+		"eventType":productEvents
+	},
+	{
+		"name":"Awards",
+		"eventType":placesEvents
+	},
+	];
+
+
+var button = $('<span class="button">' + groups[i].name + '</span>');
+
 
 function onSlide(event,ui) {
 	var scalar = ui.value / 100.01;
@@ -59,29 +81,13 @@ function onClick (event){
 	removeEventContainers();
 	resetSlider();
 	setupEventContainers(selectedEvents);
+	$(event.currentTarget).addClass('buttonselected');
 }
 
 function setupNavigation () {
 	var navigationContainer = $('#navigation-container');
 
-	var groups = [{
-		"name":"Places",
-		"eventType":placesEvents
-	},
-	{
-		"name":"People",
-		"eventType":peopleEvents
-	},
-	{
-		"name":"Products",
-		"eventType":productEvents
-	},
-	{
-		"name":"Awards",
-		"eventType":placesEvents
-	},
-	];
-
+	
 
 	for (var i = 0; i < groups.length; i++) {
 		var button = $('<span class="button">' + groups[i].name + '</span>');
