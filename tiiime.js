@@ -82,10 +82,6 @@ function setupNavigation () {
 		"name":"Products",
 		"eventType":productEvents
 	},
-	{
-		"name":"Awards",
-		"eventType":placesEvents
-	},
 	];
 
 	for (var i = 0; i < groups.length; i++) {

@@ -29,7 +29,7 @@
 	font-size: 1em;
 }
 .ui-widget-content {
-	border: 1px solid #aaaaaa;
+	border: 0px solid #aaaaaa;
 	background: #222121 url("images/ui-bg_flat_60_222121_40x100.png") 50% 50% repeat-x;
 	color: #222121;
 }
@@ -37,7 +37,7 @@
 	color: #222121;
 }
 .ui-widget-header {
-	border: 1px solid #aaaaaa;
+	border: 0px solid #aaaaaa;
 	background: #222121 url("images/ui-bg_highlight-soft_75_222121_1x100.png") 50% 50% repeat-x;
 	color: #222222;
 	font-weight: bold;
@@ -51,7 +51,7 @@
 .ui-state-default,
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
-	border: 5px solid #ffffff;
+	border: 0px solid #ffffff;
 	background: #0bbbef url("images/ui-bg_flat_75_0bbbef_40x100.png") 50% 50% repeat-x;
 	font-weight: normal;
 	color: #555555;
@@ -68,7 +68,7 @@
 .ui-state-focus,
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
-	border: 1px solid #ffffff;
+	border: 0px solid #ffffff;
 	background: #f8f8f8 url("images/ui-bg_flat_75_f8f8f8_40x100.png") 50% 50% repeat-x;
 	font-weight: normal;
 	color: #212121;
@@ -87,7 +87,7 @@
 .ui-state-active,
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active {
-	border: 1px solid #ffffff;
+	border: 0px solid #ffffff;
 	background: #0bbbef url("images/ui-bg_flat_65_0bbbef_40x100.png") 50% 50% repeat-x;
 	font-weight: normal;
 	color: #212121;
@@ -104,7 +104,7 @@
 .ui-state-highlight,
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {
-	border: 1px solid #fcefa1;
+	border: 0px solid #fcefa1;
 	background: #fbf2ee url("images/ui-bg_glass_55_fbf2ee_1x400.png") 50% 50% repeat-x;
 	color: #363636;
 }
@@ -116,7 +116,7 @@
 .ui-state-error,
 .ui-widget-content .ui-state-error,
 .ui-widget-header .ui-state-error {
-	border: 1px solid #cd0a0a;
+	border: 0px solid #cd0a0a;
 	background: #fef1ec url("images/ui-bg_glass_95_fef1ec_1x400.png") 50% 50% repeat-x;
 	color: #cd0a0a;
 }
